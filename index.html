@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <input id="cityInput" type="text" placeholder="Wie ist das Wetter in?">
+            <button type="button" onclick="showWeather()">Stadt suchen</button>
+        </section>
+        <section>
+            <h1>Wetter in <span id="city"></span></h1>
+            <article>
+                <img id="imgOut" src="http://openweathermap.org/img/wn/01d@2x.png" alt="">
+                <p id="temperatur"> °C</p>
+            </article>
+            <table>
+                <tr>
+                    <th>Local time</th>
+                    <td id="localeTime"></td>
+                </tr>
+                <tr>
+                    <th>Wind</th>
+                    <td id="wind"></td>
+                </tr>
+                <tr>
+                    <th>Wolken</th>
+                    <td id="cloudiness"></td>
+                </tr>
+                <tr>
+                    <th>Druck</th>
+                    <td id="pressure"></td>
+                </tr>
+                <tr>
+                    <th>Luftfeuchtigkeit</th>
+                    <td id="humidity"></td>
+                </tr>
+                <tr>
+                    <th>Sonnenaufgang</th>
+                    <td id="sunrise"></td>
+                </tr>
+                <tr>
+                    <th>Sonnenuntergang</th>
+                    <td id="sunset"></td>
+                </tr>
+                <tr>
+                    <th>GeoKoordinaten</th>
+                    <td id="geocords"></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <script src="./assets/main.js"></script>
+</body>
+</html>
