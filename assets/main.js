@@ -5,6 +5,7 @@ let imgOut = document.getElementById("imgOut");
 let temperaturOut = document.getElementById("temperatur");
 let windOut = document.getElementById("wind");
 let cloudOut = document.getElementById("cloudiness");
+let cloudsOut = document.getElementById("cloudsOut")
 let pressureOut = document.getElementById("pressure");
 let humidityOut = document.getElementById("humidity");
 let sunriseOut = document.getElementById("sunrise");
@@ -46,7 +47,7 @@ function getWindDirection(degrees) {
 
 function showWeather() {
   city = document.getElementById("cityInput").value;
-  weatherCity.innerHTML = city;
+  weatherCity.innerHTML = city.charAt(0).toUpperCase() + city.slice(1);
 
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=de&appid=${apiKey}`)
     .then(response => response.json())
@@ -72,6 +73,7 @@ function showWeather() {
       temperaturOut.innerHTML = (data.main.temp - 274.15).toFixed(2) + "°C";
       windOut.innerHTML = data.wind.speed + " m/s " + windDirection;
       cloudOut.innerHTML = data.weather[0].description;
+      cloudsOut.innerHTML = data.weather[0].description;
       pressureOut.innerHTML = data.main.pressure + " hPa";
       humidityOut.innerHTML = data.main.humidity + "%";
       geoCordsOut.innerHTML = `[${data.coord.lat}, ${data.coord.lon}]`;

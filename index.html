@@ -10,16 +10,18 @@
 
 <body>
     <main>
+
         <section>
-            <input id="cityInput" type="text" placeholder="Wie ist das Wetter in?">
-            <button type="button" onclick="showWeather()">Stadt suchen</button>
-        </section>
-        <section>
-            <h1>Wetter in <span id="city"></span></h1>
-            <article>
+            <article class="search">
+                <input id="cityInput" type="text" placeholder="Wie ist das Wetter in?">
+                <button type="button" onclick="showWeather()">Stadt suchen</button>
+            </article>
+            <h1 id="city"></h1>
+            <article class="img-style">
                 <img id="imgOut" src="http://openweathermap.org/img/wn/01d@2x.png" alt="">
                 <p id="temperatur"> °C</p>
             </article>
+            <p id="cloudsOut"></p>
             <table>
                 <tr>
                     <th>Local time</th>
